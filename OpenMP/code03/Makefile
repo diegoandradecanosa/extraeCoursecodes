@@ -1,6 +1,6 @@
 all: bicg_v0 bicg_v1
 
-FLAGS=  -DLARGE_DATASET
+FLAGS=  -DLARGE_DATASET -g 
 
 bicg_v0: 
 	gcc $(FLAGS) -fopenmp -O2 -I../../common bicg_v0.c ../../common/polybench.c -o bicg_v0

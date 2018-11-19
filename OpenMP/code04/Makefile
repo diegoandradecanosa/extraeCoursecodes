@@ -1,6 +1,6 @@
 all: jacobi-2d-imper_v0 jacobi-2d-imper_v1 jacobi-2d-imper_v2
 
-FLAGS= -DEXTRALARGE_DATASET
+FLAGS= -DEXTRALARGE_DATASET -g 
 
 jacobi-2d-imper_v0: 
 	gcc $(FLAGS) -fopenmp -O2 -I../../common jacobi-2d-imper_v0.c ../../common/polybench.c -o jacobi-2d-imper_v0

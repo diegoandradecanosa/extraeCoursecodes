@@ -1,6 +1,6 @@
 all: correlation_v0 correlation_v1
 
-FLAGS= -lm
+FLAGS= -lm -g 
 
 correlation_v0: 
 	gcc $(FLAGS) -fopenmp -O2 -I../../common correlation_v0.c ../../common/polybench.c -o correlation_v0
