@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <math.h>
-#define chunk_size 100
+#define chunk_size 2000
 
 /* Include polybench common header. */
 #include <polybench.h>
@@ -20,6 +20,10 @@
 /* Default data type is double, default size is 20x1000. */
 #include "jacobi-2d-imper.h"
 
+ #define min(a,b) \
+   ({ __typeof__ (a) _a = (a); \
+       __typeof__ (b) _b = (b); \
+     _a < _b ? _a : _b; })
 
 /* Array initialization. */
 static
@@ -75,14 +79,15 @@ void kernel_jacobi_2d_imper(int tsteps,
       for (t = 0; t < _PB_TSTEPS; t++)
       {
         for (i = 1; i < _PB_N - 1; i++)
-	#pragma omp depend(in:B[jj],B[jj+_PB_N], B[jj+_PB_N]) depend(out: A[jj])
-	 for(j=i;j<((j+chunk_size) && (j< _PB_N-1));j=j+chunk_size)
-          for (jj = (j*_PB_N)+1; jj < ((j*_PB_N)+_PB_N - 1); jj++)
+	 for(j=1;j< (_PB_N-1);j=j+chunk_size)
+	#pragma omp depend(in:A[(i-1):2][j:chunk_size]) depend(out: B[(i-1):2][j:chunk_size)
+          for (jj = j; jj < min(j+chunk_size,_PB_N-1); jj++)
             B[i][jj] = 0.2 * (A[i][jj] + A[i][jj-1] + A[i][1+jj] + A[1+i][jj] + A[i-1][jj]);
-	      #pragma omp for schedule(static) 
         for (i = 1; i < _PB_N-1; i++)
-          for (j = 1; j < _PB_N-1; j++)
-            A[i][j] = B[i][j];
+	 for(j=1;j< (_PB_N-1);j=j+chunk_size)
+        #pragma omp depend(in:B[i][j:chunk_size) depend(out:A[i][j:chunk_size])
+          for (jj = j; jj < min(j+chunk_size,_PB_N-1); jj++)
+            A[i][jj] = B[i][jj];
       }
     }
 //  }

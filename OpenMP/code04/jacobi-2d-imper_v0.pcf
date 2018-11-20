@@ -107,7 +107,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v0.c) [0 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
+3 70 (jacobi-2..per_v0.c) [70 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
 
 
 EVENT_TYPE
@@ -125,7 +125,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v0.c) [0 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
+3 70 (jacobi-2..per_v0.c) [70 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
 
 
 EVENT_TYPE
@@ -143,7 +143,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v0.c) [0 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
+3 70 (jacobi-2..per_v0.c) [70 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
 
 
 EVENT_TYPE
@@ -170,7 +170,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v0.c) [0 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
+3 70 (jacobi-2..per_v0.c) [70 (jacobi-2d-imper_v0.c, jacobi-2d-imper_v0)]
 
 
 EVENT_TYPE
@@ -260,19 +260,19 @@ GRADIENT_NAMES
 EVENT_TYPE
 0 41000000 Object addresses for task 1.1
 VALUES
-1 completed.6352 [0x006015d0-0x006015d0]
-2 dtor_idx.6354 [0x006015d8-0x006015df]
-3 __FRAME_END__ [0x00401338-0x00401337]
-4 __PRETTY_FUNCTION__.5198 [0x004010f0-0x00401105]
-5 polybench_t_start [0x006015f0-0x006015f7]
-6 polybench_papi_counters_threadid [0x006015e0-0x006015e3]
-7 polybench_c_end [0x006015f8-0x006015ff]
-8 polybench_t_end [0x00601600-0x00601607]
-9 _IO_stdin_used [0x00401050-0x00401053]
-10 polybench_program_total_flops [0x006015e8-0x006015ef]
-11 __dso_handle [0x00401058-0x00401057]
-12 polybench_c_start [0x00601608-0x0060160f]
-13 stderr@@GLIBC_2.2.5 [0x006015c8-0x006015cf]
+1 completed.6352 [0x00601580-0x00601580]
+2 dtor_idx.6354 [0x00601588-0x0060158f]
+3 __FRAME_END__ [0x004012f8-0x004012f7]
+4 __PRETTY_FUNCTION__.5198 [0x004010b0-0x004010c5]
+5 polybench_t_start [0x006015a0-0x006015a7]
+6 polybench_papi_counters_threadid [0x00601590-0x00601593]
+7 polybench_c_end [0x006015a8-0x006015af]
+8 polybench_t_end [0x006015b0-0x006015b7]
+9 _IO_stdin_used [0x00401010-0x00401013]
+10 polybench_program_total_flops [0x00601598-0x0060159f]
+11 __dso_handle [0x00401018-0x00401017]
+12 polybench_c_start [0x006015b8-0x006015bf]
+13 stderr@@GLIBC_2.2.5 [0x00601578-0x0060157f]
 
 EVENT_TYPE
 9    40000018    Tracing mode:

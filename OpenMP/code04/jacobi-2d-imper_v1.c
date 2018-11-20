@@ -74,11 +74,12 @@ void kernel_jacobi_2d_imper(int tsteps,
       for (t = 0; t < _PB_TSTEPS; t++)
       {
         for (i = 1; i < _PB_N - 1; i++)
-#pragma omp depend(in: A[j], A[j+_PB_N], src[j-_PB_N]) depend(out: B[j])   
+#pragma omp depend(in: A[(i-1):2][0:_PB_N+1]) depend(out: B[i][1:_PB_N])   
           for (j = 1; j < _PB_N - 1; j++)
             B[i][j] = 0.2 * (A[i][j] + A[i][j-1] + A[i][1+j] + A[1+i][j] + A[i-1][j]);
-	      #pragma omp for schedule(static) 
+	      
         for (i = 1; i < _PB_N-1; i++)
+	#pragma omp depend(in:B[i][1:_PB_N) depend(out:A[i][1:_PB_N])
           for (j = 1; j < _PB_N-1; j++)
             A[i][j] = B[i][j];
       }

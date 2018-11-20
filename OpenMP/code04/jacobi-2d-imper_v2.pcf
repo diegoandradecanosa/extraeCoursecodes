@@ -107,7 +107,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v2.c) [0 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
+3 75 (jacobi-2..per_v2.c) [75 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
 
 
 EVENT_TYPE
@@ -125,7 +125,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v2.c) [0 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
+3 75 (jacobi-2..per_v2.c) [75 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
 
 
 EVENT_TYPE
@@ -143,14 +143,9 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v2.c) [0 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
+3 75 (jacobi-2..per_v2.c) [75 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
 
 
-EVENT_TYPE
-0 60000005 OpenMP barrier
-VALUES
-0 End
-1 Begin
 EVENT_TYPE
 0 65000000 Number of OpenMP instantiated tasks
 0 65000001 Number of OpenMP executed tasks
@@ -170,7 +165,7 @@ VALUES
 0   End
 1 0 (Unresolved)
 2 0 (_NOT_Found)
-3 0 (jacobi-2..per_v2.c) [0 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
+3 75 (jacobi-2..per_v2.c) [75 (jacobi-2d-imper_v2.c, jacobi-2d-imper_v2)]
 
 
 EVENT_TYPE
@@ -260,19 +255,19 @@ GRADIENT_NAMES
 EVENT_TYPE
 0 41000000 Object addresses for task 1.1
 VALUES
-1 completed.6352 [0x006014d8-0x006014d8]
-2 dtor_idx.6354 [0x006014e0-0x006014e7]
-3 __FRAME_END__ [0x00401240-0x0040123f]
+1 completed.6352 [0x006014d0-0x006014d0]
+2 dtor_idx.6354 [0x006014d8-0x006014df]
+3 __FRAME_END__ [0x00401250-0x0040124f]
 4 __PRETTY_FUNCTION__.5198 [0x00401000-0x00401015]
-5 polybench_t_start [0x006014f8-0x006014ff]
-6 polybench_papi_counters_threadid [0x006014e8-0x006014eb]
-7 polybench_c_end [0x00601500-0x00601507]
-8 polybench_t_end [0x00601508-0x0060150f]
+5 polybench_t_start [0x006014f0-0x006014f7]
+6 polybench_papi_counters_threadid [0x006014e0-0x006014e3]
+7 polybench_c_end [0x006014f8-0x006014ff]
+8 polybench_t_end [0x00601500-0x00601507]
 9 _IO_stdin_used [0x00400f60-0x00400f63]
-10 polybench_program_total_flops [0x006014f0-0x006014f7]
+10 polybench_program_total_flops [0x006014e8-0x006014ef]
 11 __dso_handle [0x00400f68-0x00400f67]
-12 polybench_c_start [0x00601510-0x00601517]
-13 stderr@@GLIBC_2.2.5 [0x006014d0-0x006014d7]
+12 polybench_c_start [0x00601508-0x0060150f]
+13 stderr@@GLIBC_2.2.5 [0x006014c8-0x006014cf]
 
 EVENT_TYPE
 9    40000018    Tracing mode:
