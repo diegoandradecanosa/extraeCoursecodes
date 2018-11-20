@@ -85,7 +85,7 @@ void kernel_jacobi_2d_imper(int tsteps,
             B[i][jj] = 0.2 * (A[i][jj] + A[i][jj-1] + A[i][1+jj] + A[1+i][jj] + A[i-1][jj]);
         for (i = 1; i < _PB_N-1; i++)
 	 for(j=1;j< (_PB_N-1);j=j+chunk_size)
-        #pragma omp depend(in:B[i][j:chunk_size) depend(out:A[i][j:chunk_size])
+        #pragma omp depend(in:B[i][j:chunk_size]) depend(out:A[i][j:chunk_size])
           for (jj = j; jj < min(j+chunk_size,_PB_N-1); jj++)
             A[i][jj] = B[i][jj];
       }
